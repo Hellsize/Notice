@@ -9,7 +9,7 @@
     color: white;
     font-family: 'Bebas Neue', cursive;
     height: 100%;
-    width: 110px;
+    width: 50vw;
     position: absolute;
     left: 0;
     top: 0;
@@ -24,7 +24,7 @@
     color: aliceblue;
     font-family: 'Bebas Neue', cursive;
     position: relative;
-    top: 200px;
+    top: 30vh;
     left: 100px;
     width: 98vw;
     height: 70vh;
