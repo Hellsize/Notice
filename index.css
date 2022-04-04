@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-.body{
+.body {}
 
-}
-.sidebar{
+.sidebar {
     margin-left: 0px;
-    border:1px;
+    border: 1px;
     border-radius: 1px;
-    background-color:#141313 ;
+    background-color: #141313;
     color: white;
     font-family: 'Bebas Neue', cursive;
     height: 100%;
@@ -18,35 +17,34 @@
     padding: 10px;
     border: 10px 10px 10px 10px;
 }
-.interface{
-    border:1px solid black;
-    background-color:#2A2828;
-    
-    color:aliceblue;
-    font-family: 'Bebas Neue', cursive;
-    position: relative;
-    top:200px;
-    left:100px;
-    width: 98vw ;
-    height: 70vh ;
-    
-}
-.header{
-    background-color:#141313 ;
-    color: white;
-    box-sizing:border-box;
-    position: absolute;
-    left:7%;
-    top:0px;
-    margin-top:3px;
-    border: 1px solid #141313;
-    height: 29vh;
-    width: 96vw;
-    font-family: 'Bebas Neue', cursive;
-}
-.Search{
-    position: relative;
-left: 50px;
-bottom:-10px;
 
+.interface {
+    border: 1px solid black;
+    background-color: #2A2828;
+    color: aliceblue;
+    font-family: 'Bebas Neue', cursive;
+    position: relative;
+    top: 200px;
+    left: 100px;
+    width: 98vw;
+    height: 70vh;
+}
+
+.header {
+    background-color: #141313;
+    color: white;
+    box-sizing: border-box;
+    position: absolute;
+    left: 6vw;
+    top: 0px;
+    border: 1px solid #141313;
+    height: 58vh;
+    width: 100vw;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.Search {
+    position: relative;
+    left: 50px;
+    bottom: -10px;
 }
