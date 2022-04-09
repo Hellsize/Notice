@@ -20,7 +20,7 @@ a {
     color: white;
     font-family: 'Bebas Neue', cursive;
     height: 101vh;
-    width: 50vw;
+    width: 60vw;
     position: absolute;
     left: 0;
     top: 0;
@@ -70,4 +70,9 @@ a {
     position: relative;
     left: 30vw;
     bottom: 10vh;
+}
+
+.submenu {
+    position: relative;
+    left: 40vw;
 }
