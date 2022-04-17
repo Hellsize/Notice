@@ -2,13 +2,14 @@ const express = require('express'),
     app = express(),
     session = require('express-session')
 
-const host = localhost;
-const port = 3000;
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static('templates/images'));
-
-
+app.use(express.static(__dirname + '/views/static'));
+const nunjucks = require('nunjucks'); // templating framework
+nunjucks.configure(__dirname + '/views', {
+    autoescape: true,
+    express: app
+});
 
 app.use(
     session({
@@ -18,16 +19,16 @@ app.use(
 )
 
 app.get('/', function(req, res) {
-    res.render('index.html', { name: 'leo' });
+    res.render(__dirname + '/views/index.html', );
 });
 
-app.get('/', (req, res) => {
-    response.send(__dirname + "/templates/index.html")
-    console.log(req.session.showAd)
+app.get('/message', function(req, res) {
+    res.render(__dirname + "/views/message.njk")
+
 
 })
 
 
 app.listen(3000, function() {
-    console.log(`Server listens http://${host}:${port}`)
+    console.log(`Servers`)
 })
