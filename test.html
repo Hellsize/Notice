@@ -1,19 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>|
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="nunjucks.js"></script>
+    <meta charset="utf-8">
+    <title>Список задач с drag & drop</title>
 </head>
 
-    <div>
-        <p>Hello,{{ username }}</p>
-    </div>
-    
 <body>
-  
+    <div class="container">
+        <section class="tasks">
+            <h1 class="tasks__title">To do list</h1>
+
+            <ul class="tasks__list">
+                <li class="tasks__item">learn HTML</li>
+                <li class="tasks__item">learn CSS</li>
+                <li class="tasks__item">learn JavaScript</li>
+                <li class="tasks__item">learn PHP</li>
+                <li class="tasks__item">stay alive</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="test.js"></script>
 </body>
+
 </html>
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: "Tahoma", sans-serif;
+        font-size: 18px;
+        line-height: 25px;
+        color: #164a44;
+        background-color: #b2d9d0;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .tasks__title {
+        margin: 50px 0 20px 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .tasks__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .tasks__item {
+        max-width: 250px;
+        margin-bottom: 10px;
+        padding: 5px;
+        text-align: center;
+        border: 2px dashed #b2d9d0;
+        border-radius: 10px;
+        cursor: move;
+        background-color: #dff2ef;
+        transition: background-color 0.5s;
+    }
+    
+    .tasks__item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .selected {
+        opacity: 0.6;
+    }
+</style>
