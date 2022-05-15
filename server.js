@@ -5,11 +5,9 @@ const express = require('express'),
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(__dirname + '/views/static'));
-<<<<<<< HEAD
 const nunjucks = require('nunjucks');
-=======
-const nunjucks = require('nunjucks'); // templating framework
->>>>>>> 369434b53c2405be9560b5940c835c29366b2fc9
+
+
 nunjucks.configure(__dirname + '/views', {
     autoescape: true,
     express: app
@@ -29,11 +27,6 @@ app.get('/', function(req, res) {
 
 app.get('/message', function(req, res) {
     res.render(__dirname + "/views/message.njk")
-<<<<<<< HEAD
-=======
-
->>>>>>> 369434b53c2405be9560b5940c835c29366b2fc9
-
 
 })
 app.get('/reg',function(req,res){
