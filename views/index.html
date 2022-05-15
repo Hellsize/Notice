@@ -15,10 +15,6 @@
 </head>
 {%set title ="Main"%} {%block content%}
 
-<<<<<<< HEAD:views/index.html
-
-=======
->>>>>>> 369434b53c2405be9560b5940c835c29366b2fc9:templates/index.hbs
 <body>
 
     <div class="sidebar" id="sidebar">
@@ -63,28 +59,33 @@
 
     <div class="main">
         <div class="interface">
-            <div class="tasks">
+            <div class="tasks" id="draggable">
                 <h3> New tasks</h3>
                 <span id="counter">2</span>
                 <button onclick="addTask()" id="addTask">+ Add new</button>
-                <div class="task">
+                <div class="task"
+                draggable="true" id="draggable-1" ondragstart="onDragStart(event);">  
                     <h5>Icon design </h5>
                     <p>Monday</p>
                     <a href=" "><img src="/templates/images/3dot.png" alt=""></a>
                     <img src="" alt="">
                 </div>
+                <div id="complete"></div>
             </div>
-            <div class="completed">
-                <div class="c-tasks">
+            <div class="completed" id="draggables">
+                <div class="c-tasks"  ondragover="onDragOver(event);"
+                ondrop="onDrop(event);">
                     <h3>Completed</h3>
                     <span>8</span>
                     <button onclick="add_cTask()" id="add_cTask">+ Add new</button>
-                    <div class="c-task">
+                    <div class="c-task"
+                    draggable="true" id="draggable-2" ondragstart="onDragStart(event);">
                         <h5>Icon design </h5>
                         <p>Monday</p>
                         <a href=" "><img src="/templates/images/3dot.png" alt=""></a>
                         <img src="" alt="">
                     </div>
+                    <div id="c-complete"></div>
                 </div>
             </div>
         </div>
@@ -93,11 +94,6 @@
 
         </div>
     </div>
-
-<<<<<<< HEAD:views/index.html
-=======
-
->>>>>>> 369434b53c2405be9560b5940c835c29366b2fc9:templates/index.hbs
 </body>
 {%endblock%}
 
