@@ -5,6 +5,7 @@ html {
     padding: 0 auto;
     max-height: 98vh;
     max-width: 100vw;
+    display: inline-block;
 }
 
 a {
@@ -40,7 +41,18 @@ a {
     position: relative;
     top: 50vh;
 }
-
+.txt{
+   position: relative;
+   right: 10px;
+   bottom:30px;
+   width: 10vw;
+    
+}
+.checked{
+    position: relative;
+    right: 10px;
+    
+}
 .interface {
     border: 1px solid black;
     background-color: #2A2828;
@@ -115,6 +127,7 @@ a {
     margin: 5vh 10vw;
     z-index: 1;
     box-sizing: border-box;
+    cursor: move;
 }
 
 .task>a,
@@ -129,7 +142,7 @@ a {
     height: 13vh;
     background-color: #141313;
     position: relative;
-    right: -5vw;
+    left:9vw;
     border: 2px solid #393737;
     border-radius: 9%;
     padding: 5vh 5vw;
@@ -142,7 +155,7 @@ a {
     height: 13vh;
     background-color: #141313;
     position: relative;
-    right: -5vw;
+    left:9vw;
     border: 2px solid #393737;
     border-radius: 9%;
     padding: 5vh 5vw;
@@ -154,6 +167,9 @@ a {
 .tasks {
     position: relative;
     top: 0vh;
+    width:10vw;
+    margin: 0px;
+    display: inline-block;
 }
 
 .tasks>button,
@@ -176,6 +192,7 @@ button {
     box-sizing: border-box;
     z-index:1000;
     float:none;
+    outline: 1px solid grey;
 }
 
 .c-tasks>h3,

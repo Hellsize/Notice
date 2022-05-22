@@ -59,7 +59,7 @@
 
     <div class="main">
         <div class="interface">
-            <div class="tasks" id="draggable">
+            <div class="tasks" >
                 <h3> New tasks</h3>
                 <span id="counter">2</span>
                 <button onclick="addTask()" id="addTask">+ Add new</button>
@@ -74,7 +74,7 @@
             </div>
             <div class="completed" id="draggables">
                 <div class="c-tasks"  ondragover="onDragOver(event);"
-                ondrop="onDrop(event);">
+                ondrop="onDrop(event);" class="droppable" >
                     <h3>Completed</h3>
                     <span>8</span>
                     <button onclick="add_cTask()" id="add_cTask">+ Add new</button>

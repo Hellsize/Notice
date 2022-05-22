@@ -1,6 +1,6 @@
 function addTask() {
     let newdiv = document.createElement("div");
-    newdiv.innerHTML = "<input type='text'>" +  "<img src='/images/check.png' id='checked'>"
+    newdiv.innerHTML = "<input type='text' class='txt'>" +  "<img src='/images/check.png' class='checked'>"
     newdiv.className = "NewTask"
     newdiv.id = "draggable-1"
     newdiv.setAttribute("draggable", "true");
@@ -19,7 +19,7 @@ el.addEventListener("click", addTask, true);
 
 function add_cTask() {
     let newdiv = document.createElement("div");
-    newdiv.innerHTML = "<h5>Untitled</h5>"
+    newdiv.innerHTML = "<input type='text'>" +  "<img src='/images/checked.png' class='checked'>"
     newdiv.className = "NewcTask"
  newdiv.setAttribute("draggable", "true");
  
@@ -41,25 +41,51 @@ function new_section() {
 }
 
 function onDragStart(event) {
+  
     event
       .dataTransfer
       .setData('text/plain', event.target.id);
       event
       .currentTarget
+      ev.dataTransfer.dropEffect = "move";
+      evt.target.classList.add(`selected`);
     
   }
+
+
+
   function DragEnd(event){
 event
     .currentTarget
-    .document.getElementById(checked).src='/images/checked.png';
+    .document.getElementByClass(checked).src='/images/checked.png';
+    evt.target.classList.remove(`selected`);
+    
   }
 
   function onDragOver(event) {
     event.preventDefault();
+    event
+    .currentTarget
+    .document.getElementById(checked).src='/images/checked.png';
+    const activeElement = tasksListElement.querySelector(`.selected`);
+    const currentElement = evt.target;
+    const isMoveable = activeElement !== currentElement &&
+      currentElement.classList.contains(``);
+      
+    if (!isMoveable) {
+      return;
+    }
+    
+    const nextElement = (currentElement === activeElement.nextElementSibling) ?
+      currentElement.nextElementSibling :
+      currentElement;
+  
     event.setAttribute("z-index","1000")
     
   
   }
+
+  
 function myScript(){
     
     document.getElementById(checked).src='/images/checked.png';
@@ -78,3 +104,4 @@ function myScript(){
 
     object.addEventListener("dragend", myScript);
   }
+

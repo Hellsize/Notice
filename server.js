@@ -1,28 +1,17 @@
 const express = require('express'),
     app = express(),
     session = require('express-session')
-const host = localhost;
-const port = 3000;
+const sqlite3 = require('sqlite3').verbose();
 app.use(express.json())
-app.use(express.static('templates/images'));
+const urlencodedParser = express.urlencoded({ extended: false });
+app.use(express.static(__dirname + '/views/static'));
 const nunjucks = require('nunjucks');
 
-const sqlite3 = require('sqlite3').verbose();
-const { request } = require('express');
-const { send } = require('express/lib/response');
-const urlencodedParser = express.urlencoded({ extended: false });
-const res = require('express/lib/response');
-nunjucks.configure(path.resolve(__dirname, 'views'), {
+
+nunjucks.configure(__dirname + '/views', {
     autoescape: true,
     express: app
 });
-app.use(
-    session({
-        secret: abc(),
-        resave: true,
-        saveUninitialized: true,
-    })
-)
 
 function abc() {
     var abc = "qwertyuiop[]\asdfghjkl;'zxcvbnm,./!@#$%^&*()_+1234567890-=`~*";
@@ -79,24 +68,6 @@ async function registration(query, login, password, email) {
     db.close();
     return result
 }
-
-app.use(
-    session({
-        secret: 'you secret key',
-        saveUninitialized: true,
-    })
-)
-
-app.get('/', function(req, res) {
-    res.render('index.html', { name: 'leo' });
-});
-
-app.get('/', (req, res) => {
-    response.send(__dirname + "/templates/index.html")
-    console.log(req.session.showAd)
-
-})
-
 app.post("/auth", urlencodedParser, (req, res) => {
     password = req.body.pass;
     username = req.body.username;
@@ -132,26 +103,7 @@ app.post("/register", urlencodedParser, (req, res) => {
 app.get("/registration", urlencodedParser, (req, res) => {
     res.sendFile(__dirname + "/registration.html");
 });
-app.use((req, res, next) => {
-    if (req.session.user_auth) {
-        next();
-    } else {
-        res.redirect("/");
-    }
-});
-app.get("/player", urlencodedParser, (req, res) => {
-    body__req = "search";
-    getdata(body__req).then((rows) => {
-        console.log(rows);
-        let datatemplate = {
-            "data": rows
-        }
-        console.log();
-        res.render("player.njk", datatemplate);
-    }, (err) => {
-        console.log(err + " Ошибка при получении композиций");
-    });
-});
+
 app.get("/logout", (req, res) => {
     if (req.session.user_auth) {
         delete req.session.user_auth;
@@ -161,8 +113,26 @@ app.get("/logout", (req, res) => {
     }
 });
 
+app.use(
+    session({
+        secret: abc(),
+        resave: true,
+        saveUninitialized: true,
+    })
+)
+    
+app.get('/', function(req, res) {
+    res.render(__dirname + '/views/index.html', );
+});
 
+app.get('/message', function(req, res) {
+    res.render(__dirname + "/views/message.njk")
+
+})
+app.get('/reg',function(req,res){
+    res.render(__dirname + "/views/reg.html")
+})
 
 app.listen(3000, function() {
-    console.log(`Server listens http://${host}:${port}`)
+    console.log(`Servers`)
 })
