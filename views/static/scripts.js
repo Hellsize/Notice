@@ -52,8 +52,6 @@ function onDragStart(event) {
 
 }
 
-
-
 function DragEnd(event) {
     event
         .currentTarget
