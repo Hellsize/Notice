@@ -6,7 +6,6 @@ html {
     max-height: 98vh;
     max-width: 100vw;
     display: inline-block;
-    
 }
 
 a {
@@ -30,7 +29,7 @@ a {
     padding: 40px 40px 40px 00px;
     border: 10px 10px 10px 10px;
     border: 1px solid black;
-    z-index:0;
+    z-index: 0;
 }
 
 .sidebar>img {
@@ -43,25 +42,26 @@ a {
     position: relative;
     top: 50vh;
 }
-.txt{
-   position: relative;
-   right: 10px;
-   bottom:30px;
-   width: 10vw;
-    
-}
-.checked{
+
+.txt {
     position: relative;
     right: 10px;
-    
+    bottom: 30px;
+    width: 10vw;
 }
-.checks{
-position: relative;
-right: 10px;
-bottom:30px;
-width: 10vw;
 
+.checked {
+    position: relative;
+    right: 10px;
 }
+
+.checks {
+    position: relative;
+    right: 10px;
+    bottom: 30px;
+    width: 10vw;
+}
+
 .interface {
     border: 1px solid black;
     background-color: #2A2828;
@@ -125,13 +125,23 @@ width: 10vw;
     position: relative;
     left: 30vw;
 }
-.complete,c-complete{
-    position:relative;
+
+.complete,
+c-complete {
+    position: relative;
     bottom: 1px;
     width: 1px;
     height: 1px;
     outline: 5px solid red;
 }
+
+.date {
+    position: relative;
+    right: 10px;
+    bottom: 30px;
+    width: 5vw;
+}
+
 .task,
 .c-task {
     width: 17vw;
@@ -152,29 +162,31 @@ width: 10vw;
     bottom: 9vh;
     z-index: 1;
 }
+
 .NewcTask {
     width: 17vw;
     height: 13vh;
     background-color: #141313;
     position: relative;
-    left:9vw;
+    left: 9vw;
     border: 2px solid #393737;
     border-radius: 9%;
     padding: 5vh 5vw;
-    margin: 2vh 0px  2vh 1vw ;
+    margin: 2vh 0px 2vh 1vw;
     z-index: 5;
     box-sizing: border-box;
 }
+
 .NewTask {
     width: 17vw;
     height: 13vh;
     background-color: #141313;
     position: relative;
-    left:9vw;
+    left: 9vw;
     border: 2px solid #393737;
     border-radius: 9%;
     padding: 5vh 5vw;
-    margin: 2vh 0px  2vh 1vw ;
+    margin: 2vh 0px 2vh 1vw;
     z-index: 5;
     box-sizing: border-box;
 }
@@ -182,7 +194,7 @@ width: 10vw;
 .tasks {
     position: relative;
     top: 0vh;
-    width:10vw;
+    width: 10vw;
     margin: 0px;
     display: inline-block;
 }
@@ -205,8 +217,8 @@ button {
     left: 25vw;
     bottom: 30vh;
     box-sizing: border-box;
-    z-index:1000;
-    float:none;
+    z-index: 1000;
+    float: none;
 }
 
 .c-tasks>h3,
