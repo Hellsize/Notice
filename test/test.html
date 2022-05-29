@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="test.js"></script>
+</head>
+<body>
+  <div class="header">
+  
+  </div>
+  <div class="sidebar">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+  </div>
+  <div class="interface">
+    <div class="tasks" >
+      <h3> New tasks</h3>
+      <span id="counter">2</span>
+      <button onclick="addTask()" id="addTask">+ Add new</button>
+      <div class="task"
+      draggable="true" id="draggable-1" ondragstart="onDragStart(event);">  
+          
+          <a href=" "><img src="/templates/images/3dot.png" alt=""></a>
+          <img src="" alt="">
+      </div>
+
+      <div id="complete"></div>
+  </div>
+    <div id="complete"></div>
+    
+      <div class="c-tasks"  ondragover="onDragOver(event);"
+      ondrop="onDrop(event);" class="droppable" >
+          <h3>Completed</h3>
+          <span>8</span>
+          <button onclick="add_cTask()" id="add_cTask">+ Add new</button>
+          <div class="c-task"
+          draggable="true" id="draggable-2" ondragstart="onDragStart(event);">
+    
+              <a href=" "><img src="/templates/images/3dot.png" alt=""></a>
+              <img src="" alt="">
+          </div>
+      
+          <div id="c-complete"></div>
+      </div>
+
+    <div id="complete"></div>
+
+  </div>
+</body>
+</html>

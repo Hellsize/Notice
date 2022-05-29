@@ -19,7 +19,7 @@ el.addEventListener("click", addTask, true);
 
 function add_cTask() {
     let newdiv = document.createElement("div");
-    newdiv.innerHTML = "<input type='text'>" +  "<img src='/images/checked.png' class='checked'>"
+    newdiv.innerHTML = "<input type='text' class='checks'>" +  "<img src='/images/checked.png' class='checked'>"
     newdiv.className = "NewcTask"
  newdiv.setAttribute("draggable", "true");
  
@@ -100,6 +100,8 @@ function myScript(){
       dropzone.appendChild(draggableElement);
       event
     .dataTransfer
+    .dataTransfer.dropEffect = "move"
+    .e.stopPropagation()
     .clearDatа();
 
     object.addEventListener("dragend", myScript);
