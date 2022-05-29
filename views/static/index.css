@@ -38,24 +38,22 @@ a {
     bottom: 2vh;
 }
 
+.line {
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.submenu {
+    position: relative;
+    left: 40vw;
+}
+
 .user {
     position: relative;
     top: 50vh;
 }
 
 .txt {
-    position: relative;
-    right: 10px;
-    bottom: 30px;
-    width: 10vw;
-}
-
-.checked {
-    position: relative;
-    right: 10px;
-}
-
-.checks {
     position: relative;
     right: 10px;
     bottom: 30px;
@@ -106,28 +104,12 @@ a {
     bottom: 10vh;
 }
 
-.line {
-    border-left: 2px solid black;
-    border-bottom: 2px solid black;
-}
-
-.submenu {
-    position: relative;
-    left: 40vw;
-}
-
 .completed {
     position: relative;
     left: 15vw;
 }
 
-.new-section>button {
-    position: relative;
-    left: 30vw;
-}
-
-.complete,
-c-complete {
+.complete {
     position: relative;
     bottom: 1px;
     width: 1px;
@@ -287,4 +269,21 @@ button {
 
 .dropdown:hover .dropbtn {
     background-color: #5f5cb7;
+}
+
+.checked {
+    position: relative;
+    right: 10px;
+}
+
+.checks {
+    position: relative;
+    right: 10px;
+    bottom: 30px;
+    width: 10vw;
+}
+
+.new-section>button {
+    position: relative;
+    left: 30vw;
 }
