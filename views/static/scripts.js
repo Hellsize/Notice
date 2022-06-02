@@ -50,6 +50,9 @@ function onDragStart(event) {
     ev.dataTransfer.dropEffect = "move";
     evt.target.classList.add(`selected`);
 
+    
+
+
 }
 
 function DragEnd(event) {

@@ -5,6 +5,7 @@ const sqlite3 = require('sqlite3').verbose();
 app.use(express.json())
 const urlencodedParser = express.urlencoded({ extended: false });
 app.use(express.static(__dirname + '/views/static'));
+const { redirect } = require('express/lib/response');
 const nunjucks = require('nunjucks');
 
 
@@ -52,13 +53,14 @@ async function registration(query, login, password, email) {
                 reject(err)
             } else if (row.length > 0) {
                 console.log(row)
-                resolve("Такой пользоваетель уже существунет")
+                resolve("Такой пользоваетель уже существует")
             } else {
                 db.run(dataq[query], [login, password, email], function(err) {
                     if (err) {
                         reject(err);
                     } else {
                         resolve("OK");
+
                     }
                 });
             }
@@ -120,7 +122,7 @@ app.use(
         saveUninitialized: true,
     })
 )
-    
+
 app.get('/', function(req, res) {
     res.render(__dirname + '/views/index.html', );
 });
@@ -129,7 +131,7 @@ app.get('/message', function(req, res) {
     res.render(__dirname + "/views/message.njk")
 
 })
-app.get('/reg',function(req,res){
+app.get('/reg', function(req, res) {
     res.render(__dirname + "/views/reg.html")
 })
 

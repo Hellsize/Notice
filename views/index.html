@@ -25,14 +25,11 @@
         <div> <a href="">Messages</a> </div>
         <div> <a href="">Nofications</a> </div>
         <div> <a href="">Reporting</a> </div>
-        <div> <a href="">Portfolio </a> </div>
-        <div class="user">
-            <a href="localhost:3000/reg ">
-                <p>Log in</p>
-            </a>
-            <img src="" alt="">
-        </div>
+        <div> <a href="/reg">Log in </a> </div>
+
+
     </div>
+
 
 
     <div class="header">
@@ -64,14 +61,9 @@
 
             <div class="tasks">
                 <h3> New tasks</h3>
-                <span id="counter">2</span>
+                <span id="counter"></span>
                 <button onclick="addTask()" id="addTask">+ Add new</button>
-                <div class="task" draggable="true" id="draggable-1" ondragstart="onDragStart(event);">
-                    <h5>Icon design </h5>
-                    <p>Monday</p>
-                    <a href=" "><img src="/templates/images/3dot.png" alt=""></a>
-                    <img src="" alt="">
-                </div>
+
 
                 <div id="complete"></div>
             </div>
@@ -79,14 +71,9 @@
             <div class="completed" id="draggables">
                 <div class="c-tasks" ondragover="onDragOver(event);" ondrop="onDrop(event);" class="droppable">
                     <h3>Completed</h3>
-                    <span>8</span>
+                    <span id="counter-1"></span>
                     <button onclick="add_cTask()" id="add_cTask">+ Add new</button>
-                    <div class="c-task" draggable="true" id="draggable-2" ondragstart="onDragStart(event);">
-                        <h5>Icon design </h5>
-                        <p>Monday</p>
-                        <a href=" "><img src="/templates/images/3dot.png" alt=""></a>
-                        <img src="" alt="">
-                    </div>
+
 
                     <div id="c-complete"></div>
                 </div>
